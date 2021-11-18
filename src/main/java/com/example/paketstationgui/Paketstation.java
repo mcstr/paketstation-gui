@@ -74,15 +74,17 @@ public class Paketstation {
     }
 
     public String entnehmenOutput(ArrayList<String> sendungsNummern, String empfaenger) {
-        System.out.print(sendungsNummern.size());
-        if (sendungsNummern.size() == 2) {
-            sendungsNummern.add(-1, "und");
-        } else if (sendungsNummern.size() > 3) {
-            sendungsNummern.add(-2, "und");
-        }
+        sendungsNummern.add(sendungsNummern.size()- 1, "und");
+
+
+//        if (sendungsNummern.size() == 2) {
+//            sendungsNummern.add(sendungsNummern.size()- 1, "und");
+//        } else {
+//            sendungsNummern.add(sendungsNummern.size() - 1, "und");
+//        }
         String sendungsNummernformatted = sendungsNummern.toString().replace("[", "").replace("]", "");
         StringBuilder string = new StringBuilder();
-
+        System.out.toString();
         String message = String.format(Locale.GERMANY, "Paket mit der Nr. %s  von %s entnommen",
                 sendungsNummernformatted, empfaenger);
         string.append(message);

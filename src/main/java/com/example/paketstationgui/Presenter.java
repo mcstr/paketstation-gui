@@ -2,7 +2,6 @@ package com.example.paketstationgui;
 
 import javafx.event.Event;
 import javafx.event.EventHandler;
-import javafx.scene.control.Label;
 import javafx.scene.input.*;
 import javafx.scene.paint.Color;
 
